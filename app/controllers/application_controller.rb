@@ -8,8 +8,4 @@ class ApplicationController < ActionController::Base
     session[:cart] ||= []
   end
 
-  def cart
-    @item = Item.find(params[:id])
-    current_cart << @item.id
-  end
 end
